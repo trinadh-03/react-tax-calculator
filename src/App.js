@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import IncomeForm from './IncomeForm';
-import DeductionsForm from './DeductionsForm';
+import IncomeForm from './income_Form';
+import DeductionsForm from './deduction_Form';
 import './App.css';
 
 function App() {
