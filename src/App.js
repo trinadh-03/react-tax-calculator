@@ -2,18 +2,14 @@ import React, { useState } from 'react';
 import IncomeForm from './income_Form';
 import DeductionsForm from './deduction_Form';
 import './App.css';
-
+import { calTax } from './taxCalculator';
+import TaxResult from './TaxResult';
 function App() {
   const [income, setIncome] = useState('');
   const [deductions, setDeductions] = useState('');
 
-  const{ taxableIncome, tax} = calculate(Number(income), Number(deductions))
-  return(
-    <div classname="App">
-     <h1>Tax Calculations</h1>
-    </div>
-  )
-
+  const{ taxableIncome, tax} = calTax(Number(income), Number(deductions))
+  
 
   return (
     <div className="App">
